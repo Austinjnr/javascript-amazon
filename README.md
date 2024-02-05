@@ -1,1 +1,1 @@
-# javascript
+# JavaScript 101
