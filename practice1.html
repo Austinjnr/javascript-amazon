@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice-1</title>
+  <style>
+    button {
+      padding: 8px;
+      background-color: rgb(28, 91, 128);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgb(255, 255, 255);
+      color: rgb(28, 91, 128);
+      border: 1px solid rgb(28, 91, 128);
+    }
+    button:active {
+      box-shadow: 0 0 7px rgba(0, 0, 0, 3);
+    }
+  </style>
+</head>
+<body>
+  <p>Adults PLain Cotton T-shirt</p>
+  <p>Price: $7.99</p>
+  <button onclick="
+  alert('Added to cart');
+  console.log('Buyong..');
+  ">Add to Cart</button>
+  <button onclick="
+  alert('Added to wishlist');
+  console.log('loading...');
+  ">Add to Wishlist</button>
+</body>
+</html>
