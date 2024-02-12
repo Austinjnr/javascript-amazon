@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML CSS Review</title>
+    <style>
+      button {
+        padding: 8px;
+        background-color: rgb(28, 91, 128);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        /*
+        this is a comment
+        */
+      }
+      button:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(28, 91, 128);
+        border: 1px solid rgb(28, 91, 128);
+      }
+      button:active {
+        box-shadow: 0 0 7px rgba(0, 0, 0, 3);
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      title="goodjob"
+      onclick="
+      alert('goodjob!');
+      "
+    >
+      Hello Word
+    </button>
+    <!--
+      this is a comment
+    -->
+    <p>Paragraph of <button>hello</button> text</p>
+
+    <script>
+      // this is a comment (single-line comment)and are important because they provide more information about the code.
+
+      //this is commenting out the code when we don't want to run it or delete it.
+      // alert("Hello Word");
+
+      /* this is a multi 
+      line 
+      comment*/
+      2+2
+      console.log(2+3);
+      console.log('some' + 'thing');
+    </script>
+  </body>
+</html>
