@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <button
+      onclick="
+      updateCartQuantity('');
+    "
+    >
+      Show Quantity
+    </button>
+    <button
+      onclick="
+      updateCartQuantity('one');
+    "
+    >
+      Add to cart
+    </button>
+    <button
+      onclick="
+      updateCartQuantity('two');
+    "
+    >
+      +2
+    </button>
+    <button
+      onclick="
+      updateCartQuantity('three');
+    "
+    >
+      +3
+    </button>
+    <button
+      onclick="
+      updateCartQuantity('four');
+    "
+    >
+      +4
+    </button>
+    <button
+      onclick="
+      updateCartQuantity('five');
+    "
+    >
+      +5
+    </button>
+    <button
+      onclick="
+      updateCartQuantity('remove');
+    "
+    >
+      Remove from cart
+    </button>
+    <button
+      onclick="
+      updateCartQuantity('delete');
+    "
+    >
+      Reset Cart
+    </button>
+    <button
+      onclick="
+      updateCartQuantity('removeTwo');
+    "
+    >
+      -2
+    </button>
+    <button
+      onclick="
+      updateCartQuantity('removeThree');
+    "
+    >
+      -3
+    </button>
+    <script>
+      function updateCartQuantity(quantity) {
+        let cartQuantity = 0;
+
+        if (quantity === "one") {
+          if (cartQuantity >= 10) {
+            alert("cart is already full");
+          } else {
+            cartQuantity++;
+            console.log(`Cart Quantity: ${cartQuantity}`);
+          }
+        } else if (quantity === "two") {
+          if (cartQuantity >= 10) {
+            alert("cart is already full");
+          } else {
+            cartQuantity += 2;
+            console.log(`Cart Quantity: ${cartQuantity}`);
+          }
+        } else if (quantity === "three") {
+          if (cartQuantity >= 10) {
+            alert("cart is already full");
+          } else {
+            cartQuantity += 3;
+            console.log(`Cart Quantity: ${cartQuantity}`);
+          }
+        } else if (quantity === "four") {
+          if (cartQuantity >= 10) {
+            alert("cart is already full");
+          } else {
+            cartQuantity += 4;
+            console.log(`Cart Quantity: ${cartQuantity}`);
+          }
+        } else if (quantity === "five") {
+          if (cartQuantity >= 10) {
+            alert("cart is already full");
+          } else {
+            cartQuantity += 5;
+            console.log(`Cart Quantity: ${cartQuantity}`);
+          }
+        } else if (quantity === "remove") {
+          if (cartQuantity >= 1) {
+            cartQuantity--;
+            console.log(`Cart Quantity: ${cartQuantity}`);
+          } else {
+            alert("cart is already empty");
+          }
+        } else if (quantity === "delete") {
+          cartQuantity = 0;
+          console.log(`Cart was rest`);
+          console.log(`Cart Quantity: ${cartQuantity}`);
+        } else if (quantity === "removeTwo") {
+          if (cartQuantity >= 2) {
+            cartQuantity -= 2;
+            console.log(`Cart Quantity: ${cartQuantity}`);
+          } else {
+            alert("There are no enough items");
+          }
+        } else if (quantity === "removeThree") {
+          if (cartQuantity >= 3) {
+            cartQuantity -= 3;
+            console.log(`Cart Quantity: ${cartQuantity}`);
+          } else {
+            alert("There are no enough items");
+          }
+        } else if (quantity === "") {
+          console.log(`Cart Quantity: ${cartQuantity}`);
+        }
+
+        return cartQuantity;
+      }
+    </script>
+  </body>
+</html>
