@@ -4,33 +4,33 @@
     <title>Rock Paper scissors</title>
   </head>
   <body>
-    <p>Rock Paper scissors</p>
+    <p>Rock Paper scissors with fuction</p>
     <button
       onclick="
       playGame('rock');
-  "
+    "
     >
       Rock
     </button>
     <button
       onclick="
-      playGame('paper');
-      "
+        playGame('paper');
+        "
     >
       Paper
     </button>
     <button
       onclick="
       playGame('scissors');
-     "
+      "
     >
       Sicssors
     </button>
     <script>
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
-
         let result = "";
+
         if (playerMove === "scissors") {
           if (computerMove === "rock") {
             result = "You Lose";
@@ -39,16 +39,14 @@
           } else if (computerMove === "scissors") {
             result = `It\'s a tie.`;
           }
-
         } else if (playerMove === "paper") {
-          if (computerMove === "paper") {
-            result = `It\'s a Tie.`;
-          } else if (computerMove === "rock") {
+          if (computerMove === "rock") {
             result = "You Win.";
+          } else if (computerMove === "paper") {
+            result = `It\'s a Tie.`;
           } else if (computerMove === "scissors") {
             result = "You Lose.";
           }
-          
         } else if (playerMove === "rock") {
           if (computerMove === "rock") {
             result = `It\'s a Tie.`;
@@ -58,7 +56,6 @@
             result = "You Win.";
           }
         }
-
         alert(
           `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
         );
