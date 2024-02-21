@@ -13,26 +13,79 @@
         name: "pizza", //property-value pair
         price: 1090,
       };
-      console.log(typeof product);
+      /*console.log(typeof product);
       console.log(product.name);
-      console.log(product.price);
+      console.log(product.price);*/
 
       // how to change a value inside an object
       product.name = "shawarma";
-      console.log(product);
+      //console.log(product);
 
       //how to add a value to an object
       product.newProperty = true;
-      console.log(product);
+      //console.log(product);
 
       //how to remove a value from an object
       delete product.newProperty;
-      console.log(product);
+      //console.log(product);
 
       /*why we use objects
       Makes our code more organized by grouping multiple values together
       Allows us to use multilpe values together
       */
+
+    //  in objects we acn save any type of value numbers, string, booleans and other form of objects
+      const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+
+        //nested objects
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+
+        //Function inside an object is called a method
+        fun: function function1() {
+          console.log('Function inside object');
+        }
+      }
+      console.log(product2);
+
+      //how to access values inside an object
+      // dot notation
+      console.log(product2.name);
+
+      // bracket notation
+      // lets us use propreties that do not work with dot notation
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+
+      console.log(product2.rating.stars);
+      product2.fun();
+
+      // console is an object provided by JS and log is a fuction saved inside the console object
+      console.log(typeof console.log)
+
+      // built-in objects, they are are provided by the language
+      //JSON
+      //LocalStorage
+      
+      // JSON Built-in object 
+      // helps us work with JavaScript Object Notation (JSON)
+      //We use JSON when we send data between computers and when we store data
+
+      //convert JS object to JSON
+      JSON.stringify(product2);
+      console.log(JSON.stringify(product2));
+
+      //convert JSON to JS object 
+      JSON.parse(JSON.stringify(product2));
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+
+      //LocalStorage
+      //saves a value more permanently 
     </script>
   </body>
 </html>
